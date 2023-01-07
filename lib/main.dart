@@ -22,6 +22,8 @@ import 'package:cornea/navigation_bar/convex_bottom_bar.dart';
 import 'package:cornea/navigation_bar/convex_button_demo.dart';
 import 'package:cornea/navigation_bar/default_appbar_demo.dart';
 
+import 'folding_cell/folding_cell_list_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -36,7 +38,7 @@ class _State extends State<MyApp> {
       initialRoute: "/",
       routes: {
         "/": (BuildContext context) => DefaultAppBarDemo(),
-        "/custom": (BuildContext context) => CustomAppBarDemo(),
+        "/custom": (BuildContext context) => const FoldingCellListPage(),
         "/fab": (BuildContext context) => ConvexButtonDemo(),
       },
     );

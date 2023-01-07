@@ -18,6 +18,7 @@ import 'package:cornea/navigation_bar/convex_bottom_bar.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
+import '../folding_cell/folding_cell.dart';
 import 'components/chip_item.dart';
 import 'components/choose_tab_item.dart';
 import 'components/colors_item.dart';
@@ -62,6 +63,7 @@ class _State extends State<DefaultAppBarDemo>
   myBadge? _badge;
   TabController? _tabController;
   TextDirection _textDirection = TextDirection.ltr;
+  late Set<int> openedIndices = {};
 
   @override
   void initState() {
@@ -119,14 +121,43 @@ class _State extends State<DefaultAppBarDemo>
               onPressed: () {
                 _tabController?.animateTo(2);
               },
-            )
+            ),
           ],
         ),
         body: TabBarView(
             controller: _tabController,
             children: _tabItems.value
                 .map((i) => i.title == 'Schedule'
-                    ? ListView(children: options)
+                    ? Stack(
+                        children: [
+                          Image.asset(
+                            'assets/images/background.png',
+                            width: MediaQuery.of(context).size.width,
+                            fit: BoxFit.cover,
+                          ),
+                          Center(
+                            child: ListView.builder(
+                              itemCount: 10,
+                              itemBuilder: (BuildContext context, int index) {
+                                return FoldingCell(
+                                  key: ValueKey(index),
+                                  foldingState: openedIndices.contains(index) ? FoldingState
+                                      .open : FoldingState.close,
+                                  onChanged: (foldState) {
+                                    if (foldState == FoldingState.open) {
+                                      print('open cell -- $index');
+                                      openedIndices.add(index);
+                                    } else {
+                                      print('close cell -- $index');
+                                      openedIndices.remove(index);
+                                    }
+                                  },
+                                );
+                              },
+                            ),
+                          )
+                        ],
+                      )
                     : Center(
                         child: Text(
                         '${i.title} Page',
