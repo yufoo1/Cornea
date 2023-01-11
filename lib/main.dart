@@ -38,7 +38,7 @@ class _State extends State<MyApp> {
       initialRoute: "/",
       routes: {
         "/": (BuildContext context) => DefaultAppBarDemo(),
-        "/custom": (BuildContext context) => const FoldingCellListPage(),
+        "/custom": (BuildContext context) => CustomAppBarDemo(),
         "/fab": (BuildContext context) => ConvexButtonDemo(),
       },
     );

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "882203280456",
+    "project_id": "cornea-yufoo1",
+    "storage_bucket": "cornea-yufoo1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:882203280456:android:5b6ed89f94715b3eb6047d",
+        "android_client_info": {
+          "package_name": "com.example.cornea"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "882203280456-5b6q8o8k5r74a0fpbdab60s2dcvo18ma.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGXawx4m5dseUH6edvQckrnjtJGXMw8YA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "882203280456-5b6q8o8k5r74a0fpbdab60s2dcvo18ma.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "882203280456-sv0rdif5oqig1u6j7kph4iemjfhk27k9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cornea"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
