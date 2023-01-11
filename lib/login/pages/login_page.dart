@@ -87,14 +87,12 @@ class _LoginPageState extends State<LoginPage>
                       });
                     }
                   },
-                  children: <Widget>[
-                    ConstrainedBox(
-                      constraints: const BoxConstraints.expand(),
-                      child: const SignIn(),
+                  children: const <Widget>[
+                    SingleChildScrollView(
+                      child: SignIn(),
                     ),
-                    ConstrainedBox(
-                      constraints: const BoxConstraints.expand(),
-                      child: const SignUp(),
+                    SingleChildScrollView(
+                      child: SignUp(),
                     ),
                   ],
                 ),
