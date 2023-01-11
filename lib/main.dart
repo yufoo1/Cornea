@@ -15,6 +15,7 @@
  */
 
 
+import 'package:cornea/login/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 import 'package:cornea/navigation_bar/custom_appbar_sample.dart';
@@ -38,7 +39,7 @@ class _State extends State<MyApp> {
       initialRoute: "/",
       routes: {
         "/": (BuildContext context) => DefaultAppBarDemo(),
-        "/custom": (BuildContext context) => CustomAppBarDemo(),
+        "/custom": (BuildContext context) => LoginPage(),
         "/fab": (BuildContext context) => ConvexButtonDemo(),
       },
     );
